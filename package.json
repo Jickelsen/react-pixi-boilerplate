@@ -46,6 +46,9 @@
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.0",
     "redbox-react": "^1.0.1",
+    "redux-devtools": "^3.0.2",
+    "redux-devtools-dock-monitor": "^1.0.1",
+    "redux-devtools-log-monitor": "^1.0.2",
     "rimraf": "^2.4.3",
     "transform-loader": "^0.2.3",
     "url-loader": "^0.5.7",
@@ -55,8 +58,10 @@
   },
   "dependencies": {
     "pixi.js": "^3.0.8",
-    "react": "^0.14.0",
+    "react": "^0.14.7",
     "react-dom": "^0.14.0",
-    "react-pixi": "^0.7.4"
+    "react-pixi": "^0.7.4",
+    "react-redux": "^4.1.1",
+    "redux": "^3.1.2"
   }
 }
