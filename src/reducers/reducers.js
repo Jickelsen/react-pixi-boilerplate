@@ -1,5 +1,4 @@
-import * as actionTypes from '../constants/ActionTypes';
-import {PlayerStates} from '../constants/PlayerStates';
+import {ActionTypes, PlayerStates} from '../actions/player';
 import {combineReducers} from 'redux';
 
 
@@ -12,25 +11,25 @@ const initialPlayerState = {
 function playerMovement(state = initialPlayerState, action) {
   if (state.playerState !== PlayerStates.JUMPING) {
     switch (action.type) {
-    case actionTypes.MOVE_UP:
+    case ActionTypes.MOVE_UP:
         return {
             playerState: PlayerStates.WALKING,
             playerPos: {x: state.playerPos.x,
                         y: state.playerPos.y-action.dist}
         };
-    case actionTypes.MOVE_DOWN:
+    case ActionTypes.MOVE_DOWN:
       return {
         playerState: PlayerStates.WALKING,
         playerPos: {x: state.playerPos.x,
                     y: state.playerPos.y+action.dist}
       };
-    case actionTypes.MOVE_LEFT:
+    case ActionTypes.MOVE_LEFT:
       return {
         playerState: PlayerStates.WALKING,
         playerPos: {x: state.playerPos.x-action.dist,
                     y: state.playerPos.y}
       };
-    case actionTypes.MOVE_RIGHT:
+    case ActionTypes.MOVE_RIGHT:
       return {
         playerState: PlayerStates.WALKING,
         playerPos: {x: state.playerPos.x+action.dist,

@@ -1,9 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import pixi from 'pixi.js';
-import {Stage, Sprite, VectorText} from 'react-pixi';
+import {Stage, Sprite} from 'react-pixi';
 import {connect} from 'react-redux';
-import {PlayerStates} from './constants/PlayerStates';
-import {playerControls, moveUp, moveDown, moveLeft, moveRight} from './actions/player';
+import {playerControls} from './actions/player';
 
 const SPEED = 0.005;
 class App extends Component {
